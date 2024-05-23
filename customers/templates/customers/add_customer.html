@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Add Customer</title>
 </head>
+
 <body>
     <div class="container mt-5">
-        <h1>Add Customer</h1>
+        <h1>Enter customer details</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
@@ -17,7 +19,7 @@
         <h2 class="mt-5">Customer List</h2>
         <ul class="list-group">
             {% for customer in customers %}
-                <li class="list-group-item">{{ customer.name }} - {{ customer.email }} - {{ customer.date_of_birth }}</li>
+            <li class="list-group-item">{{ customer.name }} - {{ customer.email }} - {{ customer.date_of_birth }}</li>
             {% endfor %}
         </ul>
     </div>
@@ -25,4 +27,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
